@@ -1,0 +1,15 @@
+{
+  "name": "metronome",
+  "description": "Detects shortcut-taking behavior and guides Claude to follow procedures step by step",
+  "version": "1.0.0",
+  "author": {
+    "name": "shinpr"
+  },
+  "keywords": [
+    "hooks",
+    "guard",
+    "step-by-step",
+    "metronome"
+  ],
+  "license": "MIT"
+}

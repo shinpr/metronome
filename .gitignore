@@ -1,0 +1,10 @@
+.claude
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+*.egg-info/
+*.egg
+.mypy_cache/

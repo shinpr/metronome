@@ -1,0 +1,23 @@
+{
+  "name": "metronome",
+  "description": "Detects shortcut-taking behavior and guides Claude to follow procedures step by step",
+  "owner": {
+    "name": "shinpr"
+  },
+  "metadata": {
+    "description": "Detects shortcut-taking behavior and guides Claude to follow procedures step by step"
+  },
+  "plugins": [
+    {
+      "name": "metronome",
+      "description": "Detects shortcut-taking behavior and guides Claude to follow procedures step by step",
+      "version": "1.0.0",
+      "author": {
+        "name": "shinpr"
+      },
+      "source": "./metronome",
+      "category": "productivity",
+      "homepage": "https://github.com/shinpr/metronome"
+    }
+  ]
+}
