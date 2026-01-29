@@ -62,16 +62,14 @@ claude
 ## Structure
 
 ```
-metronome/                        # marketplace root
+metronome/
 ├── .claude-plugin/
-│   └── marketplace.json
-├── metronome/                    # plugin
-│   ├── .claude-plugin/
-│   │   └── plugin.json
-│   ├── hooks/
-│   │   └── hooks.json
-│   └── scripts/
-│       └── check-efficiency.py
+│   ├── marketplace.json
+│   └── plugin.json
+├── hooks/
+│   └── hooks.json
+├── scripts/
+│   └── check-efficiency.py
 ├── tests/
 │   └── test_check_efficiency.py
 └── README.md
