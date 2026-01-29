@@ -41,8 +41,10 @@ GUIDANCE = json.dumps({
         "permissionDecision": "deny",
         "permissionDecisionReason": (
             "Slow down.\n\n"
-            "Read the current task, execute it, verify the result, "
-            "then move to the next."
+            "Your previous message contained shortcut-taking language. "
+            "This is a sign you are about to skip steps.\n\n"
+            "Read the current task, execute it one at a time, "
+            "verify the result, then move to the next."
         ),
     }
 })
