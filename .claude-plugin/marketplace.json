@@ -11,11 +11,11 @@
     {
       "name": "metronome",
       "description": "Detects shortcut-taking behavior and guides Claude to follow procedures step by step",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "author": {
         "name": "shinpr"
       },
-      "source": "./metronome",
+      "source": "./",
       "category": "productivity",
       "homepage": "https://github.com/shinpr/metronome"
     }

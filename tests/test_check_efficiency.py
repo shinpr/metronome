@@ -11,7 +11,6 @@ import unittest
 SCRIPT_PATH = os.path.join(
     os.path.dirname(__file__),
     "..",
-    "metronome",
     "scripts",
     "check-efficiency.py",
 )
