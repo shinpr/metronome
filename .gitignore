@@ -1,4 +1,5 @@
 .claude
+tmp/
 
 # Python
 __pycache__/
