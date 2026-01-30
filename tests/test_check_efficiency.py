@@ -205,6 +205,17 @@ class TestDetection(unittest.TestCase):
         result = run_hook(path)
         assert_blocked(self, result)
 
+    def test_should_block_when_progress_entry_between_text_and_tool_use(self):
+        """Non-assistant/non-user entries (e.g. progress) should be skipped."""
+        path = write_transcript([
+            make_assistant_entry("効率的に作業します。"),
+            json.dumps({"type": "progress", "data": "processing..."}),
+            make_tool_use_entry(),
+        ])
+        self.addCleanup(os.unlink, path)
+        result = run_hook(path)
+        assert_blocked(self, result)
+
 
 class TestEdgeCases(unittest.TestCase):
     """Tests for edge cases and boundary conditions."""
