@@ -58,8 +58,9 @@ def get_last_assistant_text(transcript_path):
     time is often a tool_use block with no text. This function skips such
     entries and finds the nearest assistant entry that has actual text.
 
-    Stops searching when a non-assistant entry (e.g. user) is encountered,
-    so only the current response is considered.
+    Stops searching when a user entry is encountered, so only the current
+    response is considered. Non-assistant/non-user entries (e.g. progress,
+    file-history-snapshot) are skipped.
     """
     if not os.path.isfile(transcript_path):
         return ""
@@ -82,8 +83,11 @@ def get_last_assistant_text(transcript_path):
         return ""
 
     for entry in reversed(entries):
-        if entry.get("type") != "assistant":
+        entry_type = entry.get("type", "")
+        if entry_type == "user":
             break
+        if entry_type != "assistant":
+            continue
         texts = []
         for block in entry.get("message", {}).get("content", []):
             if isinstance(block, dict) and block.get("type") == "text":
